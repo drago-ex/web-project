@@ -1,0 +1,31 @@
+{
+	"name": "drago-ex/project",
+	"type": "project",
+	"description": "The basis for new projects on Drago Extension",
+	"license": ["MIT"],
+	"authors": [
+		{
+			"name": "Zdeněk Papučík",
+			"homepage": "https://github.com/accgit"
+		}
+	],
+	"require": {
+		"php": ">=8.1 <8.3",
+		"nette/robot-loader": "^4.0",
+		"latte/latte": "^3.0",
+		"tracy/tracy": "^2.9",
+		"drago-ex/bootstrap": "dev-master",
+		"drago-ex/translator": "dev-master",
+		"drago-ex/application": "dev-master"
+	},
+	"minimum-stability": "stable",
+	"require-dev": {
+		"phpstan/phpstan-nette": "^1.2.9"
+	},
+	"autoload": {
+		"psr-4": {"App\\": "app"}
+	},
+	"scripts": {
+		"phpstan": "phpstan analyse --level 5 --configuration phpstan.neon app"
+	}
+}

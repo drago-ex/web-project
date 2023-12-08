@@ -1,0 +1,45 @@
+# default parameters
+parameters:
+
+
+# settings for sessions
+session:
+	name: drago-project
+	expiration: 14 days
+	savePath: '%tempDir%/sessions'
+
+
+# application settings
+application:
+	errorPresenter: Error
+
+	# application mapping
+	mapping:
+		*: [App, Modules\*, Presenters\*Presenter]
+
+
+# enabling system container for Tracy bar
+di:
+	debugger: yes
+	export:
+		parameters: no
+		tags: no
+
+
+# strict parser mode
+latte:
+	strictTypes: yes
+
+
+# application extensions
+extensions:
+	- Drago\Localization\DI\TranslatorExtension(translateDir: %appDir%/locales)
+
+
+# automatic class registration
+search:
+	-
+		in: %appDir%
+		classes:
+			- *Repository
+			- *Factory

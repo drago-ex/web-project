@@ -13,7 +13,7 @@ Basis for new projects on Drago Extension
 
 ## Installation
 ```
-composer create-project drago-ex/project
+composer create-project drago-ex/web-project
 ```
 
 ## npm

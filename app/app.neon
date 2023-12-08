@@ -36,6 +36,11 @@ extensions:
 	- Drago\Localization\DI\TranslatorExtension(translateDir: %appDir%/locales)
 
 
+# services for application
+services:
+	- App\Router::create
+
+
 # automatic class registration
 search:
 	-
